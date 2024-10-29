@@ -1,0 +1,23 @@
+<h1>TO DO</h1>
+<ul>
+    @if (toDo.length>0){
+    @for(task of toDo;track task.id){
+    <li>
+        @if(!task.update){
+        {{task.title}}
+        <button (click)="removeTask(task.id)">X</button>
+        <button (click)="editTask(task)">Editar</button>
+        }
+        @else {
+        <input type="text" [(ngModel)]="task.newTitle" name="newTitle">
+        <button (click)="cancelEdit(task)">X</button>
+        <button (click)="updateTask(task)">Aceptar</button>
+        }
+    </li>
+    }
+    }@else{
+    <p>No hay tareas que mostrar</p>
+    }
+</ul>
+<hr>
+<app-create-task (taskCreated)="addTask($event)"></app-create-task>

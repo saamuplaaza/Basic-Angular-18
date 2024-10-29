@@ -1,0 +1,20 @@
+#cronometro{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pantalla{
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.botones{
+    margin-top: 3px;
+}
+
+button{
+    margin: 3px;
+}

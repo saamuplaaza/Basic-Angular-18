@@ -1,0 +1,17 @@
+<div id="cronometro">
+    <div class="pantalla">{{cont}}
+        @if (cont !== 1) {
+            segundos
+        }@else {
+            segundo
+        }
+    </div>
+    <div class="botones">
+        @if (isPaused) {
+            <button type="button" (click)="play()"><i class="fa-solid fa-play"></i></button>
+        }@else {
+            <button type="button" (click)="pause()"><i class="fa-solid fa-pause"></i></button>
+        }
+        <button type="button" (click)="reset()"><i class="fa-solid fa-rotate-right"></i></button>
+    </div>
+</div>
